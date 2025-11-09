@@ -12,4 +12,6 @@
   --text-color: #F1B2CE;
   --font-weight-700: 700;
   --font-size-18: 18px;
+  --btn-dark-hover: rgba(255, 0, 112, 0.4);
+  --btn-light-hover: rgba(50, 49, 45, 0.4);
 }

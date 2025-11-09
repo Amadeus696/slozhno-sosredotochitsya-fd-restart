@@ -6,10 +6,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-family: var(--font-family-main), 'sans-serif';
+  font-family: var(--font-family-main), sans-serif;
   font-weight: 400;
   font-size: var(--font-size-18);
   line-height: 23.4px;
+  background-color: var(--bg-color);
 }
 
 .header {
@@ -89,7 +90,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.40);
+  outline: 1px solid var(--btn-hover);
   cursor: pointer;
 }
 
@@ -105,7 +106,15 @@
   border-bottom: 1px solid var(--button-color);
 }
 
-.decor-title-nf {
+.header__theme-menu-button_active {
+  outline: 1px solid var(--btn-hover);
+}
+
+.theme-auto .header__theme-menu-button_type_auto {
+  outline: 1px solid var(--btn-hover);
+}
+
+.decor-title-main {
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -123,14 +132,13 @@
 
 .header_text {
   inline-size: 491px;
-  block-size: 70px;
   font-family: inherit;
   align-self: center;
   justify-self: end;
 }
 
 main {
-  font-family: var(--font-family-main), 'sans-serif';
+  font-family: var(--font-family-main), sans-serif;
   font-size: var(--font-size-18);
   line-height: 23.4px;
   font-weight: 400;
@@ -148,6 +156,7 @@ main {
   font-weight: var(--font-weight-700);
   font-size: inherit;
   line-height: inherit;
+  max-width: 315px;
 }
 
 .section_answer_text {
@@ -276,7 +285,7 @@ main {
     min-height: 1024px;
   }
 
-  .decor-title-nf {
+  .decor-title-main {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -288,7 +297,6 @@ main {
   }
 
   .header_text {
-    block-size: 117px;
     max-inline-size: 364px;
     display: flex;
   }
@@ -322,7 +330,7 @@ main {
   }
 }
 
-@media (width <= 376px) {
+@media (width <= 600px) {
 
   main {
     margin: 0px 10px;
@@ -353,7 +361,7 @@ main {
     inset-block-start: 11px;
   }
 
-  .decor-title-nf {
+  .decor-title-main {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
