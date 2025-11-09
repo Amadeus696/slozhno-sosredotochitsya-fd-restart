@@ -1,0 +1,32 @@
+/*
+  Специально для тёмной темы при наличии класса,
+  здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root.theme-dark {
+  --bg-img: var(--bg-dark-img);
+  --header-title-sub: #000028;
+  --accent-color: #FF0070;
+  --title-color: #DB00FF;
+  --text-color: #F1B2CE;
+  --button-color: #FF0070;
+  --rec-visible: flex;
+}
+
+.theme-dark .header__theme-menu-button_type_dark {
+  outline: 1px solid var(--button-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-img: var(--bg-dark-img);
+    --header-title-sub: #000028;
+    --accent-color: #FF0070;
+    --title-color: #DB00FF;
+    --text-color: #F1B2CE;
+    --button-color: #FF0070;
+    --rec-visible: flex;
+  }
+
+}
